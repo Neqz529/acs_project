@@ -9,6 +9,8 @@ import (
 	"os/exec"
 	"path/filepath"
 
+	config "cloud_vision/config"
+
 	vision "cloud.google.com/go/vision/apiv1"
 	"github.com/gin-gonic/gin"
 	option "google.golang.org/api/option"
@@ -63,7 +65,7 @@ func DetectVideoHandler(c *gin.Context) {
 	}
 
 	ctx := context.Background()
-	client, err := vision.NewImageAnnotatorClient(ctx, option.WithCredentialsFile("/Users/andrej/Desktop/work_dir/go_projects/src/acs_project/sevice_key.json"))
+	client, err := vision.NewImageAnnotatorClient(ctx, option.WithCredentialsFile(config.GCPCredentials))
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create Vision API client"})
 		return

@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 
-	endpoints "acs_project/endpoints"
+	endpoints "cloud_vision/endpoints"
 )
 
 func main() {

@@ -5,7 +5,7 @@
 
 # Dependency directories (when using Go modules)
 # These are ignored by default in recent versions of Go, but you can keep them here for good measure
-*/vendor/
+/vendor/
 
 service_key.json
 

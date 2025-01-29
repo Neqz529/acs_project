@@ -1,22 +1,23 @@
-module acs_project
+module cloud_vision
 
-go 1.22
+go 1.22.7
 
 toolchain go1.23.5
 
 require (
+	cloud.google.com/go/videointelligence v1.12.3
 	cloud.google.com/go/vision v1.2.0
 	github.com/gin-gonic/gin v1.10.0
 	google.golang.org/api v0.219.0
-	google.golang.org/genproto v0.0.0-20241118233622-e639e219e697
+	google.golang.org/genproto v0.0.0-20250127172529-29210b9bc287
 )
 
 require (
-	cloud.google.com/go v0.116.0 // indirect
+	cloud.google.com/go v0.118.0 // indirect
 	cloud.google.com/go/auth v0.14.0 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.7 // indirect
 	cloud.google.com/go/compute/metadata v0.6.0 // indirect
-	cloud.google.com/go/longrunning v0.6.2 // indirect
+	cloud.google.com/go/longrunning v0.6.4 // indirect
 	cloud.google.com/go/vision/v2 v2.9.3 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
@@ -56,7 +57,7 @@ require (
 	golang.org/x/sys v0.29.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.9.0 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20241209162323-e6fa225c2576 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20250124145028-65684f501c47 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250124145028-65684f501c47 // indirect
 	google.golang.org/grpc v1.70.0 // indirect
 	google.golang.org/protobuf v1.36.4 // indirect
