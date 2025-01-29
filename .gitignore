@@ -1,0 +1,48 @@
+# Binaries and build directories
+/bin/
+/build/
+/out/
+
+# Dependency directories (when using Go modules)
+# These are ignored by default in recent versions of Go, but you can keep them here for good measure
+/vendor/
+
+service_key.json
+
+# Go workspace
+# For example, if you're using go workspaces, you can ignore:
+# .vscode/
+# .idea/
+
+# Go modules
+go.sum
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Archive files
+*.tar.gz
+*.zip
+*.rar
+*.tar
+
+# Test coverage files
+coverage.out
+
+# Go-generated files
+*.pb.go
+*.pb.gw.go
+*.swagger.gen.go
