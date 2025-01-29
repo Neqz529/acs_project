@@ -9,4 +9,4 @@ In project repo prompt
 
 Can require installation of some packages with "go get ..."
 
-Also it is mandatory to add in package config file from google cloud with running Google Vision
+Also it is mandatory to add in root repo config file from google cloud with running Google Vision API and Video Intelligence API
