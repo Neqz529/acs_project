@@ -8,11 +8,8 @@ import (
 	"os"
 	"os/exec"
 
-	config "video_intelligence/config"
-
 	videointelligence "cloud.google.com/go/videointelligence/apiv1"
 	"github.com/gin-gonic/gin"
-	option "google.golang.org/api/option"
 	videopb "google.golang.org/genproto/googleapis/cloud/videointelligence/v1"
 )
 
@@ -60,7 +57,7 @@ func DetectImageLabelsHandler(c *gin.Context) {
 	}
 
 	ctx := context.Background()
-	client, err := videointelligence.NewClient(ctx, option.WithCredentialsFile(config.GCPCredentials))
+	client, err := videointelligence.NewClient(ctx)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create Video Intelligence API client"})
 		return

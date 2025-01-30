@@ -5,11 +5,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	config "cloud_vision/config"
-
 	vision "cloud.google.com/go/vision/apiv1"
 	"github.com/gin-gonic/gin"
-	option "google.golang.org/api/option"
 	visionpb "google.golang.org/genproto/googleapis/cloud/vision/v1"
 )
 
@@ -34,7 +31,7 @@ func DetectObjectHandler(c *gin.Context) {
 	}
 
 	ctx := context.Background()
-	client, err := vision.NewImageAnnotatorClient(ctx, option.WithCredentialsFile(config.GCPCredentials))
+	client, err := vision.NewImageAnnotatorClient(ctx)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create Vision API client"})
 		return
